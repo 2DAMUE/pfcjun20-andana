@@ -1,0 +1,40 @@
+<resources>
+    <!-- Base application theme. -->
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        &lt;!&ndash; Customize your theme here. &ndash;&gt;
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>-->
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/darkGrey</item>
+        <item name="colorAccent">@color/orangeYellow</item>
+    </style>
+
+    <style name="AppTheme.Launcher">
+        <item name="android:windowBackground">@drawable/launcher</item>
+    </style>
+
+    <style name="MenuText">
+        <item name="fontFamily">@font/helvetica_nueue_c_b</item>
+        <item name="android:textColor">@color/darkGrey</item>
+    </style>
+
+    <style name="AlertDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:textColor">@color/orangeYellow</item>
+        <item name="android:textColorPrimary">@color/orangeYellow</item>
+        <item name="android:background">@color/darkGrey</item>
+        <item name="android:color">@color/grey</item>
+    </style>
+
+    <style name="EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/lightGrey</item>
+    </style>
+
+    <style name="CancelButton" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/lightGrey</item>
+    </style>
+</resources>

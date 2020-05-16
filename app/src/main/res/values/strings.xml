@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Where I Park</string>
+
+    <!--    Permissions    -->
+    <string name="permission_rationale_location">Access to the location service is required to demonstrate the \'my location\' feature, which shows your current location on the map.</string>
+    <string name="location_permission_denied">This sample requires location permission to enable the \'my location\' layer. Please try again and grant access to use the location.\nIf the permission has been permanently denied, it can be enabled from the System Settings &gt; Apps &gt; \'Google Maps API Demos\'.</string>
+    <string name="permission_required_toast">Location permission is required for this demo.</string>
+
+    <!--   Navigation Drawer   -->
+    <string name="anadir_loc">Guardar aparcamiento</string>
+    <string name="compartir_loc">Compartir aparcamiento</string>
+    <string name="salir">Salir</string>
+
+    <string name="open">NavBar</string>
+    <string name="close">NavBar</string>
+
+    <!--  App  -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="borrar">Borrar</string>
+    <string name="share_error">No se ha podido compartir</string>
+    <string name="share_location_text">Compartir ubicación</string>
+    <string name="share_loc_dialog_title">Ups...</string>
+    <string name="share_loc_dialog_msg">No has aparcado, guarda un aparcamiento</string>
+    <string name="accept">Aceptar</string>
+    <string name="signature">\n\nBy Where I park</string>
+    <string name="dialog_notes_title">Notas</string>
+    <string name="dialog_notes_msg">Describe dónde has aparcado</string>
+    <string name="dialog_notes_save">Guardar</string>
+    <string name="def_note">Aquí está mi coche</string>
+    <string name="cancel">Cancelar</string>
+    <string name="delete_loc_dialog_title">¡Cuidado!</string>
+    <string name="delete_loc_dialog_msg">¿Estás seguro de que quieres borrar tu aparcamiento?</string>
+    <string name="delete_no_loc_dialog_title">No tienes ningún aparcamiento guardado</string>
+
+    <!--  Toasts  -->
+    <string name="toast_saved_marker">Aparcamiento guardado</string>
+    <string name="toast_trash">NO HAS DADO PERMISOS!, ME VOY A CERRAR EN 3 SEGUNDOS</string>
+    <string name="delete_ok">Aparcamiento borrado</string>
+
+</resources>

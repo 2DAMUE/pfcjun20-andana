@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/addLoc"
+        android:title="@string/anadir_loc"
+        android:icon="@drawable/ic_directions_car_black_24dp"
+        >
+    </item>
+
+    <item
+        android:id="@+id/shareLoc"
+        android:title="@string/compartir_loc"
+        android:icon="@drawable/ic_share_black_24dp">
+    </item>
+
+    <item
+        android:id="@+id/delete"
+        android:title="@string/borrar"
+        android:icon="@drawable/ic_delete_black_24dp">
+    </item>
+</menu>
