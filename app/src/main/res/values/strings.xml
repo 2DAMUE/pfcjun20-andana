@@ -8,33 +8,55 @@
 
     <!--   Navigation Drawer   -->
     <string name="anadir_loc">Guardar aparcamiento</string>
-    <string name="compartir_loc">Compartir aparcamiento</string>
+    <string name="compartir_loc">Compartir</string>
+    <string name="add_fav">Añadir a favoritos</string>
+    <string name="get_back">Ver favoritos</string>
     <string name="salir">Salir</string>
-
     <string name="open">NavBar</string>
     <string name="close">NavBar</string>
+    <string name="borrar">Borrar</string>
 
     <!--  App  -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="borrar">Borrar</string>
     <string name="share_error">No se ha podido compartir</string>
     <string name="share_location_text">Compartir ubicación</string>
     <string name="share_loc_dialog_title">Ups...</string>
     <string name="share_loc_dialog_msg">No has aparcado, guarda un aparcamiento</string>
     <string name="accept">Aceptar</string>
     <string name="signature">\n\nBy Where I park</string>
-    <string name="dialog_notes_title">Notas</string>
+    <string name="dialog_notes_title">Guardar aparcamiento</string>
     <string name="dialog_notes_msg">Describe dónde has aparcado</string>
     <string name="dialog_notes_save">Guardar</string>
     <string name="def_note">Aquí está mi coche</string>
     <string name="cancel">Cancelar</string>
-    <string name="delete_loc_dialog_title">¡Cuidado!</string>
-    <string name="delete_loc_dialog_msg">¿Estás seguro de que quieres borrar tu aparcamiento?</string>
+    <string name="delete_loc_dialog_title">¿Estás seguro?</string>
+    <string name="delete_loc_dialog_msg">Estás a punto de borrar tu aparcamiento</string>
     <string name="delete_no_loc_dialog_title">No tienes ningún aparcamiento guardado</string>
+    <string name="dialog_modif_title">Modificar</string>
+    <string name="dialog_modif_msg">Edita el título y/o la descipción</string>
+    <string name="dialog_add_title_fav">Añadir un favorito</string>
+    <string name="dialog_add_msg_fav">Añade un título y/o una descipción</string>
+    <string name="fav_title_default">Quiero volver a aquí</string>
+    <string name="fav_description_default">Añade una descripción...</string>
+    <string name="notes_hint">Describe dónde has aparcado</string>
+    <string name="title_fav_hint">Título...</string>
+    <string name="desc_fav_hint">Descripción...</string>
+    <string name="delete_alert_tittle">¡Cuidado!</string>
+    <string name="delete_alert_msg">Estas a punto de borrar, ¿Estás seguro?</string>
+    <string name="close_alert_msg">Cerrar</string>
+    <string name="see_image">Ver foto</string>
+    <string name="no_image">No tienes ninguna foto guardada</string>
+    <string name="favorites_group">Favoritos</string>
+    <string name="no_favorite_msg">Todavía no has guardado ningún favorito</string>
+    <string name="loading_msg">LOADING</string>
 
     <!--  Toasts  -->
-    <string name="toast_saved_marker">Aparcamiento guardado</string>
     <string name="toast_trash">NO HAS DADO PERMISOS!, ME VOY A CERRAR EN 3 SEGUNDOS</string>
-    <string name="delete_ok">Aparcamiento borrado</string>
+    <string name="toast_added_fav">Favorito añadido</string>
+
+    <!-- ShortCut -->
+    <string name="go_to_map">Ir al mapa</string>
+    <string name="favorites">Favoritos</string>
+
+
 
 </resources>

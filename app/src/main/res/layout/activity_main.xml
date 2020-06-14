@@ -16,9 +16,10 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@android:color/transparent"/>
+            android:layout_margin="10dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/border_radius"/>
 
     </RelativeLayout>
 
@@ -29,46 +30,9 @@
         android:layout_gravity="start"
         app:headerLayout="@layout/navigation_header"
         app:menu="@menu/navigation_menu"
-        app:itemTextColor="@color/darkGrey"
-        app:itemIconTint="@color/darkGrey"
+        app:itemTextColor="@color/colorPrimaryDark"
+        app:itemIconTint="@color/colorPrimaryDark"
         app:itemTextAppearance="@style/MenuText"
         >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="bottom"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:id="@+id/llExit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="bottom"
-                android:orientation="horizontal"
-                android:padding="18dp">
-
-                <ImageView
-                    android:id="@+id/iconExit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_exit_to_app_black_24dp"/>
-
-                <TextView
-                    android:id="@+id/exit"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="24dp"
-                    android:layout_marginBottom="1dp"
-                    android:text="Salir"
-                    android:textColor="@color/darkGrey"
-                    android:fontFamily="@font/helvetica_nueue_c_b"/>
-
-
-            </LinearLayout>
-
-
-        </LinearLayout>
     </com.google.android.material.navigation.NavigationView>
-
-
 </androidx.drawerlayout.widget.DrawerLayout>

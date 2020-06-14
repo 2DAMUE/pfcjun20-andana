@@ -1,6 +1,7 @@
 package uem.dam.seg.whereipark.Main.view;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,12 +9,12 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 
+import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -23,12 +24,15 @@ import uem.dam.seg.whereipark.Main.fragment.MapFragment;
 import uem.dam.seg.whereipark.R;
 import uem.dam.seg.whereipark.SharedPreferences.PreferencesHelper;
 import uem.dam.seg.whereipark.SharedPreferences.model.UbicationModel;
+import uem.dam.seg.whereipark.javaBean.Ubication;
 
 /**
  * @author Andrea Muñoz, Daniel Alonso, Ignacio López.
  * @version 1.0
  */
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
+
+    private static final int LAUNCH_CODE = 1;
 
     public DrawerLayout drawerLayout;
     private ActionBarDrawerToggle actionBarDrawerToggle;
@@ -58,6 +62,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      * @see #addLocation()
      * @see #shareLocation()
      * @see #deleteLoc()
+     * @see #insertFavorites()
+     * @see #readUbications()
      */
     private void configureDrawer() {
         final NavigationView navView = findViewById(R.id.nav_view);
@@ -73,17 +79,45 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 } else if (id == R.id.shareLoc) {
                     shareLocation();
 
+                } else if (id == R.id.addFavorites) {
+                    insertFavorites();
+
+                } else if (id == R.id.readUbications) {
+                    readUbications();
+
                 } else if (id == R.id.delete) {
                     deleteLoc();
 
-
-                } else if (id == R.id.llExit) {
-                    System.exit(0);
+                } else if (id == R.id.itemImage) {
+                    showImage();
                 }
 
                 return true;
             }
         });
+    }
+
+    private void showImage() {
+        mapFragment.showPhoto();
+    }
+
+    /**
+     * Método encargado de añadir un objeto Ubication a la base de datos
+     * @see MapFragment#addFavorites()
+     */
+    private void insertFavorites() {
+        mapFragment.addFavorites();
+    }
+
+    /**
+     * Método encargado de lanzar PlacesActivity a través de un intentForResult
+     * @see PlacesActivity
+     */
+    private void readUbications() {
+        Intent i = new Intent(this, PlacesActivity.class);
+        startActivityForResult(i, LAUNCH_CODE);
+
+        drawerLayout.closeDrawers();
     }
 
     /**
@@ -127,7 +161,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      * @see MapFragment#addNotes()
      */
     private void addLocation() {
-        mapFragment.clearMarker();
         mapFragment.addNotes();
     }
 
@@ -144,8 +177,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      * como las variables, los layouts, el actionBar y cargar el mapFragment en su layout correspondiente
      */
     private void configureActivity() {
-        linearLayout = findViewById(R.id.llExit);
-        linearLayout.setOnClickListener(this);
         drawerLayout = findViewById(R.id.dl);
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -175,15 +206,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     /**
-     * Método sobreescrito que controla el listener de los elementos que no forman parte del
-     * menú del navigationDrawer, en este caso el boton "Salir"
-     * @param v
+     * Método sobreescrito encargado de centrar el mapa mediante datos recogidos de un intentForResult
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     * @see MapFragment#centerFavorite(Ubication)
      */
     @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.llExit:
-                System.exit(0);
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == LAUNCH_CODE) {
+            if (resultCode == Activity.RESULT_OK) {
+                Ubication ubicat = (Ubication) data.getSerializableExtra("ubi");
+                mapFragment.centerFavorite(ubicat);
+            }
         }
     }
 }

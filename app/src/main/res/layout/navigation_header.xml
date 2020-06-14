@@ -4,8 +4,5 @@
     android:layout_width="match_parent"
     android:layout_height="140dp"
     android:gravity="center"
-    android:background="@drawable/coche_amarilo">
-
-
-
+    android:background="@drawable/coche_amarilo_800g">
 </LinearLayout>

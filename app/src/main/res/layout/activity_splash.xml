@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/darkGrey">
+    android:background="@color/colorPrimaryDark">
 
     <ImageView
         android:id="@+id/imageView"
@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="W I P"
-        android:textColor="@color/orangeYellow"
+        android:textColor="@color/colorAccent"
         android:textSize="70dp"
         app:fontFamily="@font/vonique"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -36,7 +36,7 @@
         android:id="@+id/progressBar"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:indeterminateTint="@color/orangeYellow"
+        android:indeterminateTint="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,10 +47,10 @@
         android:id="@+id/tvLoaging"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LOADING"
-        android:textColor="@color/grey"
-        android:textSize="20dp"
-        android:fontFamily="@font/helvetica_nueue_c_b"
+        android:text="@string/loading_msg"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        app:fontFamily="@font/helvetica_nueue_c_b"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
