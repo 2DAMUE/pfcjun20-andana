@@ -19,7 +19,7 @@ public class Ubication implements Serializable {
         this.latitude = latitude;
         this.longitude = longitude;
     }
-
+ 
     public long getId() {
         return id;
     }
