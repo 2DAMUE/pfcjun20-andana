@@ -2,6 +2,11 @@ package uem.dam.seg.whereipark.db;
 
 import android.provider.BaseColumns;
 
+/**
+ * Clase UbicationContract
+ * representa los campos de la tabla UBICATIONS
+ */
+
 public class UbicationContract {
 
     public static abstract class UbicationEntry implements BaseColumns {

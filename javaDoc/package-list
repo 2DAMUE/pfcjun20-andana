@@ -1,5 +1,9 @@
+uem.dam.seg.whereipark
 uem.dam.seg.whereipark.Main.fragment
 uem.dam.seg.whereipark.Main.view
 uem.dam.seg.whereipark.SharedPreferences
 uem.dam.seg.whereipark.SharedPreferences.model
 uem.dam.seg.whereipark.SplashScreen
+uem.dam.seg.whereipark.db
+uem.dam.seg.whereipark.javaBean
+uem.dam.seg.whereipark.rvUtils
